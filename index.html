@@ -1,60 +1,66 @@
 <!DOCTYPE html>
 <html lang="ja">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>スナップ家計簿</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: {
-              50: '#fff8e1',
-              100: '#ffecb3',
-              200: '#ffe082',
-              300: '#ffd54f',
-              400: '#ffca28',
-              500: '#ffc107', // Amber 500
-              600: '#ffb300',
-              700: '#ffa000',
-              800: '#ff8f00',
-              900: '#ff6f00',
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>スナップ家計簿</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                50: '#fff8e1',
+                100: '#ffecb3',
+                200: '#ffe082',
+                300: '#ffd54f',
+                400: '#ffca28',
+                500: '#ffc107', // Amber 500
+                600: '#ffb300',
+                700: '#ffa000',
+                800: '#ff8f00',
+                900: '#ff6f00',
+              },
+              navy: {
+                800: '#1a237e',
+                900: '#0d47a1',
+              }
             },
-            navy: {
-              800: '#1a237e',
-              900: '#0d47a1',
+            fontFamily: {
+              sans: ['Helvetica Neue', 'Arial', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Meiryo', 'sans-serif'],
             }
-          },
-          fontFamily: {
-            sans: ['Helvetica Neue', 'Arial', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Meiryo', 'sans-serif'],
           }
         }
       }
-    }
-  </script>
-  <style>
-    /* Custom scrollbar hide for cleaner UI on mobile lists */
-    .no-scrollbar::-webkit-scrollbar {
-      display: none;
-    }
-
-    .no-scrollbar {
-      -ms-overflow-style: none;
-      scrollbar-width: none;
-    }
-
-    body {
-      background-color: #f8fafc;
-      -webkit-tap-highlight-color: transparent;
-    }
-  </style>
-
-<body>
-  <div id="root"></div>
-  <script type="module" src="/index.tsx"></script>
-</body>
-
+    </script>
+    <style>
+      /* Custom scrollbar hide for cleaner UI on mobile lists */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      body {
+        background-color: #f8fafc;
+        -webkit-tap-highlight-color: transparent;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.34.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
 </html>

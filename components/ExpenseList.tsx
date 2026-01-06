@@ -15,19 +15,19 @@ const ExpenseList: React.FC<ExpenseListProps> = ({ expenses, onDelete }) => {
 
   if (expenses.length === 0) {
     return (
-      <div className="flex flex-col items-center justify-center py-16 text-gray-400">
+      <div className="flex flex-col items-center justify-center py-12 text-gray-400">
         <div className="bg-gray-100 p-4 rounded-full mb-4">
             <ShoppingBag className="w-8 h-8 text-gray-300" />
         </div>
-        <p className="text-lg font-medium text-gray-500">まだ記録がありません</p>
-        <p className="text-sm mt-1">下のボタンからレシートを撮影しましょう</p>
+        <p className="text-lg font-medium text-gray-500">この月の記録はありません</p>
+        <p className="text-sm mt-1">レシートを追加して記録しましょう</p>
       </div>
     );
   }
 
   return (
     <div className="space-y-3 pb-24">
-        <h2 className="text-sm font-bold text-gray-500 uppercase tracking-wider px-1">最近の履歴</h2>
+        <h2 className="text-sm font-bold text-gray-500 uppercase tracking-wider px-1">履歴</h2>
       {sortedExpenses.map((expense) => (
         <div 
           key={expense.id} 
