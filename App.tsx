@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Camera, Plus, Receipt } from 'lucide-react';
+import { Camera, Receipt } from 'lucide-react';
 import { Expense, LoadingState, ReceiptData } from './types';
 import { geminiService } from './services/geminiService';
 import SummaryCard from './components/SummaryCard';
@@ -35,7 +35,7 @@ const App: React.FC = () => {
       setScannedData(data);
       setLoadingState('idle');
       setIsModalOpen(true);
-    } catch (error) {
+    } catch (error: any) {
       console.error(error);
       alert("読み取りに失敗しました。もう一度試すか、手動で入力してください。");
       setLoadingState('idle');

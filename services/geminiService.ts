@@ -72,7 +72,7 @@ const processReceiptImage = async (file: File): Promise<ReceiptData> => {
 
     const data = JSON.parse(text) as ReceiptData;
     return data;
-  } catch (error) {
+  } catch (error: any) {
     console.error("Gemini analysis failed:", error);
     throw new Error("Failed to analyze receipt. Please try again or enter manually.");
   }
